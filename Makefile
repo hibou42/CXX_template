@@ -4,8 +4,8 @@ NAME			= template
 
 #***** Sources / Objs *****#
 
-SRC				=	z_test.cpp \
-					z_Sample.class.cpp
+SRC				=	src/z_test.cpp \
+					lib/z_Sample.class.cpp
 
 OBJ_DIR			= obj
 OBJS			= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
@@ -63,6 +63,7 @@ $(OBJ_DIR):
 		@mkdir -p $(OBJ_DIR)
 
 $(OBJ_DIR)/%.o: %.cpp | $(OBJ_DIR)
+		@mkdir -p $(dir $@)
 		@$(CXX) $(CXXFLAGS) -c $< -o $@
 		$(eval COMPILED_FILES=$(shell echo $$(($(COMPILED_FILES)+1))))
 		@printf "$(GREEN)%s$(ENDCOLOR)" $(MESSAGE)
