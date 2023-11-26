@@ -4,8 +4,9 @@ NAME			= template
 
 #***** Sources / Objs *****#
 
-SRC				=	src/z_test.cpp \
-					lib/z_Sample.class.cpp
+SRC				=	src/main.cpp \
+					lib/Sample.class.cpp \
+					src/z_del.cpp
 
 OBJ_DIR			= obj
 OBJS			= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))

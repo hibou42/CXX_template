@@ -3,6 +3,10 @@
 
 class Sample
 {
+private:
+
+	int	_privateVar;
+
 public:
 
 	int	publicVar;
@@ -11,10 +15,6 @@ public:
 	Sample(const Sample& other);			// Constructeur de copie (1)
 	~Sample(void);							// Destructeur
 	Sample& operator=(const Sample& rhs);	// Opérateur d'affectation (2)
-
-private:
-
-	int	_privateVar;
 
 };
 
