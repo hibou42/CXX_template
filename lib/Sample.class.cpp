@@ -14,12 +14,6 @@ Sample::Sample(const Sample& other)
 	std::cout << "Copy constructor called" << std::endl;
 }
 
-// Destructeur
-Sample::~Sample(void)
-{
-	std::cout << "Destructor called" << std::endl;
-}
-
 // Opérateur d'affectation
 Sample& Sample::operator=(const Sample& rhs)
 {
@@ -27,4 +21,10 @@ Sample& Sample::operator=(const Sample& rhs)
 		this->_privateVar = rhs._privateVar;
 	std::cout << "Assignment operator called" << std::endl;
 	return *this;
+}
+
+// Destructeur
+Sample::~Sample(void)
+{
+	std::cout << "Destructor called" << std::endl;
 }

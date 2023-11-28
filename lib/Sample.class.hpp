@@ -13,8 +13,8 @@ public:
 
 	Sample(void);							// Constructeur
 	Sample(const Sample& other);			// Constructeur de copie (1)
-	~Sample(void);							// Destructeur
 	Sample& operator=(const Sample& rhs);	// Opérateur d'affectation (2)
+	~Sample(void);							// Destructeur
 
 };
 
